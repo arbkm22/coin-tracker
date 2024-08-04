@@ -1,4 +1,25 @@
 .dashboard {
   color: white;
-  margin: 10px 20px;
+  margin: 10px 6rem;
+  height: auto;
+  background-color: #0D0D0D;
+  display: flex;
+  color: #999999;
+}
+
+.dashboard>* {
+  padding: 18px 0;
+}
+
+.nos {
+  margin: 0 1.4rem;
+}
+
+.name {
+  width: 24rem;
+  padding-left: 12px;
+}
+
+.common {
+  flex: 1 1 10rem;
 }
