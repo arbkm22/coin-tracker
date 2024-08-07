@@ -8,13 +8,8 @@ const API_KEY = process.env.REACT_APP_COINS_API_KEY;
 function App() {
 
     const [marketData, setMarketData] = useState({});
+    
     const formatData = (data) => {
-        console.log('volumechange: ', data.volumeChange);
-        if (data.volumeChange < 0) {
-            console.log('less');
-        } else {
-            console.log('more');
-        }
 
         return data;
     }

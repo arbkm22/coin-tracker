@@ -1,0 +1,15 @@
+.coins {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin: 10px 6rem;
+  height: auto;
+  background-color: #0D0D0D;
+  display: flex;
+  color: #999999;
+}
+
+.coins-dash {
+  color: white;
+  display: flex;
+}
