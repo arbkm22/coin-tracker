@@ -34,12 +34,33 @@ function Coins(props) {
                                 <div className="name-name">{value.name} • </div>
                                 <div className="name-symbol">{value.symbol}</div>
                             </div>
-                            <div className="1h common">{value.priceChange1h}</div>
-                            <div className="24h common">{value.priceChange1d}</div>
-                            <div className="7d common">{value.priceChange1w}</div>
-                            <div className="price common">{value.price}</div>
-                            <div className="market-cap common">{value.marketCap}</div>
-                            <div className="volume-24h common">{value.volume}</div>
+                            <div className="1h common">
+                                <div className={`coin-box ${value.priceChange1h < 0 ? 'coin-box-red' : 'coin-box-green'}`}>
+                                    {value.priceChange1h < 0 ? '⮟' : '⮝'}
+                                    {Math.abs(value.priceChange1h)}%
+                                </div>
+                            </div>
+                            <div className="24h common">
+                                <div className={`coin-box ${value.priceChange1d < 0 ? 'coin-box-red' : 'coin-box-green'}`}>
+                                    {value.priceChange1d < 0 ? '⮟' : '⮝'}
+                                    {Math.abs(value.priceChange1d)}%
+                                </div>
+                            </div>
+                            <div className="7d common">
+                                <div className={`coin-box ${value.priceChange1w < 0 ? 'coin-box-red' : 'coin-box-green'}`}>
+                                    {value.priceChange1w < 0 ? '⮟' : '⮝'}
+                                    {Math.abs(value.priceChange1w)}%
+                                </div>
+                            </div>
+                            <div className="price common">
+                                {value.price}
+                            </div>
+                            <div className="market-cap common">
+                                {value.marketCap}
+                            </div>
+                            <div className="volume-24h common">
+                                {value.volume}
+                            </div>
                             <div className="price-graph common"></div>
                         </div>
                     ))}

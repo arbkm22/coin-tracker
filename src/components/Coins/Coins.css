@@ -21,10 +21,13 @@
   cursor: pointer;
 }
 
-
-
 .name {
   display: flex;
+}
+
+.common {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
 
 .image {
@@ -38,3 +41,20 @@
   color: #999999;
 }
 
+.coin-box {
+  width: 40px;
+}
+
+.coin-box-red {
+  width: fit-content;
+  padding: 4px 10px;
+  text-align: center;
+  background-color: #310D0D;
+}
+
+.coin-box-green {
+  padding: 4px 10px;
+  width: fit-content;
+  background-color: #052910;
+  text-align: center;
+}
