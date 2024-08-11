@@ -15,3 +15,26 @@
   display: flex;
   padding: 12px 0;
 }
+
+.coins-dash:hover {
+  background-color: #181818;
+  cursor: pointer;
+}
+
+
+
+.name {
+  display: flex;
+}
+
+.image {
+  height: 30px;
+  width: 30px;
+  padding-right: 10px;
+}
+
+.name-symbol {
+  padding-left: 10px;
+  color: #999999;
+}
+

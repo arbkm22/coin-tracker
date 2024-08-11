@@ -5,16 +5,14 @@ function Coins(props) {
 
     const [coinsData, setCoinsData] = useState({});
 
+    console.log('coinsData: ', coinsData);
+
     useEffect(() => {
         const updateCoinsData = () => {
             if (props.data) {
                 setCoinsData(props.data);
             }
         }
-
-        // Object.entries(coinsData).map(([key, value]) => {
-        //     console.log(`key: ${key} | value: ${value.name}`);
-        // });
 
         updateCoinsData();
         const intervalId = setInterval(updateCoinsData, 60000);
@@ -26,11 +24,16 @@ function Coins(props) {
         <>
             {coinsData ? (
                 <div className="coins">
-                    {/* Render your coins data here */}
                     {Object.entries(coinsData).map(([key, value]) => (
                         <div className="coins-dash">
                             <div className="nos">{value.rank}</div>
-                            <div className="name">{value.name}</div>
+                            <div className="name">
+                                <div className="name-image">
+                                    <img src={value.icon} className="image"></img>
+                                </div>
+                                <div className="name-name">{value.name} • </div>
+                                <div className="name-symbol">{value.symbol}</div>
+                            </div>
                             <div className="1h common">{value.priceChange1h}</div>
                             <div className="24h common">{value.priceChange1d}</div>
                             <div className="7d common">{value.priceChange1w}</div>
@@ -45,7 +48,6 @@ function Coins(props) {
                 <p>Loading data...</p>
             )}
         </>
-        
     )
 }
 
