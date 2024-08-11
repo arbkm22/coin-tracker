@@ -16,10 +16,10 @@
 }
 
 .name {
-  width: 24rem;
+  width: 20rem;
   padding-left: 12px;
 }
 
 .common {
-  flex: 1 1 10rem;
+  flex: 1 1 8em;
 }

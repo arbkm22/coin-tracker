@@ -12,19 +12,15 @@ function Coins(props) {
             }
         }
 
-        Object.entries(coinsData).map(([key, value]) => {
-            console.log(`key: ${key} | value: ${value.name}`);
-        });
+        // Object.entries(coinsData).map(([key, value]) => {
+        //     console.log(`key: ${key} | value: ${value.name}`);
+        // });
 
         updateCoinsData();
         const intervalId = setInterval(updateCoinsData, 60000);
 
         return () => clearInterval(intervalId);
     }, [props.data]);
-    
-
-    console.log('coinsData size: ', coinsData);
-    
 
     return (
         <>
